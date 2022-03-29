@@ -10,6 +10,7 @@ namespace TurtleReplicator
 {
     class Program
     {
+        //grab the size of the directory
         private static long diresize(string fp)
         {
             DirectoryInfo size = new DirectoryInfo(fp);
@@ -24,6 +25,7 @@ namespace TurtleReplicator
             WebClient spider = new WebClient();
             //create the directory
             Directory.CreateDirectory(dire);
+            //download the turtles
             while (Directory.Exists(dire))
             {
                 counter2 = diresize(dire);
